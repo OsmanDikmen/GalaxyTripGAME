@@ -1,0 +1,40 @@
+
+<MenuWidget>:
+    canvas.before:
+        Color:
+            rgba:0,0,0,.8
+        Rectangle:
+            size:self.size
+    Label:
+        font_size : dp(55)
+        font_name : "fonts/button.ttf"
+        text : root.parent.menu_title
+        pos_hint: {"center_x":.5, "center_y": .6 }
+
+    Label:
+        text: root.parent.hight_score_txt
+        font_size : dp(20)
+        font_name : "fonts/title.ttf"
+        size_hint : .18, .18
+        pos_hint : {"x" : .06, "top" : 1}
+
+    Button:
+        font_size : dp(20)
+        font_name : "fonts/title.ttf"
+        size_hint: .2, .1
+        text: root.parent.voice_title
+        pos_hint : {"x" : .80, "top" : .95}
+        background_normal : ''
+        background_color : 0,0,0,0
+        on_press: root.parent.on_voice_pressed()
+
+
+    Button:
+        font_size : dp(25)
+        font_name : "fonts/title.ttf"
+        text : root.parent.menu_button_title
+        pos_hint: {"center_x":.5, "center_y": .3 }
+        size_hint: .2, .15
+        on_press: root.parent.on_menu_button_pressed()
+        background_normal : ''
+        background_color : 1, .3, .4, .85

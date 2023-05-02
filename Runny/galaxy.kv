@@ -1,0 +1,28 @@
+#:import menu menu
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: root.bck_image
+    menu_widget : menu_widget
+    perspective_point_x:self.width/2
+    perspective_point_y:self.height*0.75
+    Label:
+        text: root.score_txt
+        font_size : dp(20)
+        font_name : "fonts/title.ttf"
+        size_hint : .18, .18
+        pos_hint : {"x" : 0, "top" : 1}
+    Label:
+        text: root.way
+        font_size : dp(15)
+        font_name : "fonts/title.ttf"
+        size_hint : .18, .18
+        pos_hint : {"x" : .68, "top" : .97}
+        size_hint: .2, .1
+
+
+    MenuWidget:
+        id : menu_widget
